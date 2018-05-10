@@ -1,0 +1,36 @@
+[
+    {
+        "defaults": {
+            "link": {
+                "relink": true
+            }
+        }
+    },
+    {
+        "clean": ["~"]
+    },
+    {
+        "link": {
+            "~/.dotfiles": "",
+            "~/.vimrc": "vimrc",
+            "~/.tmux.conf": "tmux.conf",
+
+            "~/.emacs.d": "emacs.d",
+            "~/.doom.d": "doom.d",
+
+            "~/.config/i3": "i3",
+            "~/.config/polybar": "polybar",
+
+            "~/.xinitrc": "xinitrc",
+            "~/.Xresources": "Xresources",
+            "~/.Xdefaults": "Xdefaults",
+
+            "~/.zprofile": "zprofile"
+        }
+    },
+    {
+        "shell": [
+            ["git submodule update --init --recursive", "Installing submodules"]
+        ]
+    }
+]

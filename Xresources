@@ -1,0 +1,17 @@
+URxvt.font: xft:DejaVu Sans Mono for Powerline:size=13, xft:WenQuanYi Micro Hei Mono:regular:size=13:minspace=true
+
+URxvt.scrollBar: false
+
+URxvt.dpi: 96
+URxvt.antialias: true
+URxvt.rgba: rgb
+
+URxvt.utf-8: true
+URxvt.locale: true
+
+URxvt.inheritPixmap:true
+URxvt.transparent: true
+URxvt.shading:20
+
+URxvt.internalBorder: 10
+
