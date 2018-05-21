@@ -14,6 +14,7 @@ exec --no-startup-id fcitx
 #exec --no-startup-id ibus
 #exec --no-startup-id megasync
 #exec --no-startup-id redshift
+exec --no-startup-id compton
 
 #===appearance===
 
@@ -32,7 +33,7 @@ font pango:monospace 10
 #exec_always --no-startup-id ~/.config/i3/polybar.sh &
 
 #---i3-gaps---
-gaps inner 10
+gaps inner 20
 gaps outer 20
 
 # tray icons(eDP-1-1 is the display device's name,use the command "xrandr" to see.)
@@ -84,13 +85,16 @@ bindsym $mod+w exec --no-startup-id rofi -show-icons -show window
 bindsym $mod+Return exec i3-sensible-terminal
 
 # browsers
-bindsym $mod+a exec google-chrome-stable
+bindsym $mod+a exec firefox
 
 # printscreen(use "scrot".Print=PrtSc/PrintScreen)
 bindsym $mod+Print exec scrot
 
 # GUI file manager
 bindsym $mod+e exec --no-startup-id pcmanfm
+
+# editor
+bindsym $mod+q exec emacs
 
 
 #===workspace control===

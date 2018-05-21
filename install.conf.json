@@ -18,8 +18,14 @@
             "~/.emacs.d": "emacs.d",
             "~/.doom.d": "doom.d",
 
+            "~/.config/dunst": "dunst",
             "~/.config/i3": "i3",
+            "~/.config/i3lock": "i3lock",
             "~/.config/polybar": "polybar",
+            "~/.config/compton.conf": "compton.conf",
+            "~/.config/mpd/mpd.conf" : "mpdconf",
+
+            "~/.ncmpcpp" : "ncmpcpp",
 
             "~/.xinitrc": "xinitrc",
             "~/.Xresources": "Xresources",
