@@ -34,7 +34,7 @@ font pango:monospace 10
 
 #---i3-gaps---
 gaps inner 20
-gaps outer 20
+gaps outer 10
 
 # tray icons(eDP-1-1 is the display device's name,use the command "xrandr" to see.)
 #exec --no-startup-id xrandr --output eDP-1-1 --primary

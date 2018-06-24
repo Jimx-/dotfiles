@@ -71,18 +71,17 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-#font-0 = WenQuanYi Micro Hei Mono:pixelsize=9;3
-font-0 = hack:pixelsize=12;2
+font-0 = "DejaVu Sans:pixelsize=12;2"
 font-1 = unifont:size=12;2
 font-2 = siji:pixelsize=10;3
-font-3 = FontAwesome:pixelsize=14;2
+font-3 = fontawesome:pixelsize=14;2
 
 {% if polybar_top_file.stat.exists %}
 {% include 'by_host/' + ansible_hostname + '/modules-top.j2' %}
 {% else %}
-modules-left = i3 mpd xwindow
+modules-left = i3 xwindow
 modules-center = date
-modules-right = cpu memory wlan battery volume powermenu
+modules-right = cpu memory wlan volume powermenu
 {% endif %}
 
 tray-position = right
@@ -292,7 +291,7 @@ bar-used-indicator =
 
 [module/wlan]
 type = internal/network
-interface = wlp8s0
+interface = wlo1
 interval = 3.0
 
 format-connected = <label-connected>
@@ -329,7 +328,7 @@ label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/networkspeedup]
 type = internal/network
-interface = wlp8s0
+interface = wlo1
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = " "
@@ -337,7 +336,7 @@ format-connected-prefix-foreground = #5b
 
 [module/networkspeeddown]
 type = internal/network
-interface = wlp8s0
+interface = wlo1
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = " "

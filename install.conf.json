@@ -13,7 +13,7 @@
         "link": {
             "~/.dotfiles": "",
             "~/.vimrc": "vimrc",
-            "~/.tmux.conf": "tmux.conf",
+            "~/.vim": "vim",
 
             "~/.emacs.d": "emacs.d",
             "~/.doom.d": "doom.d",
@@ -24,6 +24,7 @@
             "~/.config/polybar": "polybar",
             "~/.config/compton.conf": "compton.conf",
             "~/.config/mpd/mpd.conf" : "mpdconf",
+            "~/.config/fontconfig": "fontconfig",
 
             "~/.ncmpcpp" : "ncmpcpp",
 
