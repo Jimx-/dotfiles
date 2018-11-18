@@ -7,7 +7,6 @@ set $mod Mod4
 exec_always --no-startup-id $HOME/.config/i3/alternating_layouts.py
 
 #===autostart parograms===
-exec --no-startup-id xcompmgr #exec --no-startup-id xcompmgr &
 #exec --no-startup-id mate-power-manager
 #exec --no-startup-id nm-applet
 exec --no-startup-id fcitx
@@ -34,7 +33,7 @@ font pango:monospace 10
 
 #---i3-gaps---
 gaps inner 20
-gaps outer 10
+gaps outer 0
 
 # tray icons(eDP-1-1 is the display device's name,use the command "xrandr" to see.)
 #exec --no-startup-id xrandr --output eDP-1-1 --primary
@@ -72,7 +71,8 @@ for_window [class="Xarchiver"] floating enable
 for_window [class="Genymotion"] floating enable
 for_window [class="Vlc"] floating enable
 for_window [class="VirtualBox"] floating enable
-for_window [class="shadowsocks-qt5"] floating enable
+for_window [class="qemu"] floating enable
+for_window [class="TeamViewer"] floating enable
 
 
 #===programs shortcuts===
@@ -85,7 +85,7 @@ bindsym $mod+w exec --no-startup-id rofi -show-icons -show window
 bindsym $mod+Return exec i3-sensible-terminal
 
 # browsers
-bindsym $mod+a exec firefox
+bindsym $mod+a exec google-chrome-stable
 
 # printscreen(use "scrot".Print=PrtSc/PrintScreen)
 bindsym $mod+Print exec scrot
@@ -270,7 +270,7 @@ bindsym $mod+Shift+s restart
 
 # i3lock
  mode "i3lock: Return to lock/Escape to Cancel" {
-            bindsym Return mode "default" exec i3lock -I 600 -i ~/Pictures/lock.jpg
+            bindsym Return mode "default" exec lock
             bindsym Escape mode "default"
     }
 
