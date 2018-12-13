@@ -85,7 +85,7 @@ bindsym $mod+w exec --no-startup-id rofi -show-icons -show window
 bindsym $mod+Return exec i3-sensible-terminal
 
 # browsers
-bindsym $mod+a exec google-chrome-stable
+bindsym $mod+a exec firefox
 
 # printscreen(use "scrot".Print=PrtSc/PrintScreen)
 bindsym $mod+Print exec scrot
@@ -170,16 +170,16 @@ bindsym $mod+b border toggle
 #---window focus---
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # foucus follows mouse(cursor)
 focus_follows_mouse yes
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+#bindsym $mod+h focus left
+#bindsym $mod+j focus down
+#bindsym $mod+k focus up
+#bindsym $mod+l focus right
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
