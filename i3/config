@@ -176,10 +176,10 @@ bindsym $mod+b border toggle
 focus_follows_mouse yes
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+#bindsym $mod+h focus left
+#bindsym $mod+j focus down
+#bindsym $mod+k focus up
+#bindsym $mod+l focus right
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
