@@ -9,9 +9,9 @@ URxvt.rgba: rgb
 URxvt.utf-8: true
 URxvt.locale: true
 
-URxvt.inheritPixmap:true
-URxvt.transparent: true
-URxvt.shading:20
+#URxvt.inheritPixmap:true
+#URxvt.transparent: true
+#URxvt.shading:20
 URxvt.internalBorder: 10
 
 ! Base16 Bright

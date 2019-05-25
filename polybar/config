@@ -48,7 +48,7 @@ font-3 = "fontawesome:style=Regular:pixelsize=12;1"
 font-6 = Hack:pixelsize=9;1
 
 modules-left = i3
-modules-center = xwindow
+;modules-center = xwindow
 ;weather update installed
 modules-right = cpu memory wlan volume date powermenu
 
