@@ -23,6 +23,7 @@
             "~/.config/polybar": "polybar",
             "~/.config/compton.conf": "compton.conf",
             "~/.config/fontconfig": "fontconfig",
+            "~/.config/rofi": "rofi",
 
             "~/.ncmpcpp" : "ncmpcpp",
 

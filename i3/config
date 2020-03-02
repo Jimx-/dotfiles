@@ -4,16 +4,20 @@
 # Super key(mod4 =windows logo key/Command key)
 set $mod Mod4
 
+exec --no-startup-id $HOME/.config/i3/autoxrandr.sh
+
 exec_always --no-startup-id $HOME/.config/i3/alternating_layouts.py
 
 #===autostart parograms===
-#exec --no-startup-id mate-power-manager
+exec --no-startup-id mate-power-manager
 #exec --no-startup-id nm-applet
 exec --no-startup-id fcitx
 #exec --no-startup-id ibus
 #exec --no-startup-id megasync
 #exec --no-startup-id redshift
 exec --no-startup-id compton
+exec --no-startup-id nextcloud
+exec --no-startup-id xss-lock -- i3lock-fancy -n
 
 #===appearance===
 
@@ -23,7 +27,7 @@ exec --no-startup-id compton
 #exec --no-startup-id feh --bg-scale $HOME/94.jpg
 
 # random mode
-exec ~/.config/i3/wallpaper.sh &
+#exec ~/.config/i3/wallpaper.sh &
 
 # font
 font pango:monospace 10
@@ -34,13 +38,13 @@ font pango:monospace 10
 #---i3-gaps---
 gaps inner 20
 gaps outer 0
+smart_gaps on
 
 # tray icons(eDP-1-1 is the display device's name,use the command "xrandr" to see.)
 #exec --no-startup-id xrandr --output eDP-1-1 --primary
 
 # external display device(use the command "xrandr" to see the display device name)
 # eg. #exec --no-startup-id xrandr --output HDMI1 1920*1080 --right-of eDP-1-1
-exec --no-startup-id $HOME/.config/i3/autoxrandr.sh
 #exec --no-startup-id xrandr --output eDP-1-1 --off --output HDMI-1-1 --primary
 
 #---window style---
@@ -80,7 +84,7 @@ for_window [class="TeamViewer"] floating enable
 # dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id "rofi -show-icons -modi combi -show combi -combi-modi run,drun"
 bindsym $mod+w exec --no-startup-id rofi -show-icons -show window
-
+bindsym $mod+g exec --no-startup-id rofi -show-icons -show file-browser
 # terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -89,6 +93,8 @@ bindsym $mod+a exec firefox
 
 # printscreen(use "scrot".Print=PrtSc/PrintScreen)
 bindsym $mod+Print exec scrot
+bindsym Print --release exec "scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
+bindsym Shift+Print exec "scrot -bs /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
 
 # GUI file manager
 bindsym $mod+e exec --no-startup-id pcmanfm
