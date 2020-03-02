@@ -24,6 +24,7 @@
             "~/.config/compton.conf": "compton.conf",
             "~/.config/fontconfig": "fontconfig",
             "~/.config/rofi": "rofi",
+            "~/.config/mpd": "mpd",
 
             "~/.ncmpcpp" : "ncmpcpp",
 
