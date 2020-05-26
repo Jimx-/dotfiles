@@ -1,3 +1,6 @@
 mpd/database
 
 *.log
+
+rime
+fcitx5/conf

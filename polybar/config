@@ -235,7 +235,6 @@ label-muted = " muted"
 label-muted-foreground = ${colors.foreground-alt}
 label-muted-underline = ${colors.primary}
 
-
 mapping = false
 format = <label>
 

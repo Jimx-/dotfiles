@@ -26,6 +26,16 @@
             "~/.config/rofi": "rofi",
             "~/.config/mpd": "mpd",
 
+            "~/.config/fcitx5": {
+                "create": true,
+                "path": "fcitx5"
+            },
+
+            "~/.local/share/fcitx5/rime": {
+                "create": true,
+                "path": "rime"
+            },
+
             "~/.ncmpcpp" : "ncmpcpp",
 
             "~/.xinitrc": "xinitrc",
