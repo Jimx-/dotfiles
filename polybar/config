@@ -9,7 +9,7 @@
 
 [colors]
 ;background = #333
-background = #00000000
+background = #55000000
 ;background = ${xrdb:color0:#00000000}
 background-alt = #444
 foreground = ${xrdb:color7:#dfdfdf}
@@ -23,7 +23,8 @@ alert = ${xrdb:color3:#bd2c40}
 monitor = ${env:MONITOR:DP-1}
 width = 100%
 height = ${env:BAR_HEIGHT:20}
-radius = ${env:BAR_RADIUS:4.0}
+;radius = ${env:BAR_RADIUS:4.0}
+radius = 0
 fixed-center = true
 bottom = false
 
@@ -33,11 +34,11 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = #f00
 
-border-size = 4
-border-color = #00000000
+border-size = 3
+border-color = ${colors.background}
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
 module-margin-left = 3
 module-margin-right = 0
@@ -220,7 +221,7 @@ format-underline = ${colors.primary}
 
 
 [module/volume]
-type = internal/volume
+type = internal/pulseaudio
 
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -235,7 +236,7 @@ label-muted = " muted"
 label-muted-foreground = ${colors.foreground-alt}
 label-muted-underline = ${colors.primary}
 
-mapping = false
+interval = 5
 format = <label>
 
 [module/battery]
@@ -244,9 +245,11 @@ battery = BAT1
 adapter = AC
 full-at = 99
 
+format-full-underline = ${colors.primary}
 format-charging-underline = ${colors.primary}
 format-discharging-underline = ${colors.primary}
 
+format-full = <ramp-capacity> <label-full>
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 
