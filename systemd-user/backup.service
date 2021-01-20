@@ -1,0 +1,8 @@
+[Unit]
+Description=Backup home directory
+
+[Service]
+Type=simple
+ExecStart=rsync -a --delete --quiet --exclude=.cache %h /media/Backup
+StandardError=journal
+

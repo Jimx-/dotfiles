@@ -93,7 +93,6 @@ for_window [class="VirtualBox"] floating enable
 for_window [class="qemu"] floating enable
 for_window [class="TeamViewer"] floating enable
 
-
 #===programs shortcuts===
 
 # dmenu (a program launcher)
@@ -108,6 +107,7 @@ bindsym $mod+a exec firefox
 
 # printscreen(use "scrot".Print=PrtSc/PrintScreen)
 bindsym $mod+Print exec scrot -u -b
+bindsym $mod+Shift+p exec scrot -s
 bindsym Print --release exec "scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
 bindsym Shift+Print exec "scrot -bs /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
 

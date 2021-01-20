@@ -1,6 +1,6 @@
 Xcursor.size: 16
 
-URxvt.font: xft:DejaVu Sans Mono for Powerline:size=12, xft:WenQuanYi Micro Hei Mono:regular:size=12:minspace=true
+URxvt.font: xft:DejaVu Sans Mono for Powerline:size=14, xft:WenQuanYi Micro Hei Mono:regular:size=14:minspace=true
 
 URxvt.scrollBar: false
 

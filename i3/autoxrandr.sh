@@ -29,7 +29,7 @@ else
     radius=4.0
     dpi=96
     tray_size=16
-    monitor="DP-1"
+    monitor="HDMI-0"
 fi
 
 wal -sR

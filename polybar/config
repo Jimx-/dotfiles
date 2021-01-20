@@ -198,7 +198,7 @@ label = %percentage_used:2%%
 
 [module/wlan]
 type = internal/network
-interface = wlp0s20f3
+interface = wlp5s0
 interval = 3
 
 format-connected = <label-connected>

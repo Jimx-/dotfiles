@@ -38,6 +38,11 @@
 
             "~/.ncmpcpp" : "ncmpcpp",
 
+            "~/.config/systemd/user": {
+                "glob": true,
+                "path": "systemd-user/*"
+            },
+
             "~/.xinitrc": "xinitrc",
             "~/.Xresources": "Xresources",
             "~/.Xdefaults": "Xdefaults",
