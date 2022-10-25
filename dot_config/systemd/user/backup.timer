@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer for Backup home directory
+
+[Timer]
+Unit=backup.service
+
+OnCalendar=*-*-* 00:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

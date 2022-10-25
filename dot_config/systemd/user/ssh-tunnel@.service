@@ -1,0 +1,20 @@
+[Unit]
+Description=SSH tunnel to %i
+Documentation=man:ssh(1)
+Wants=ssh-agent.service
+After=network.target ssh-agent.service
+
+[Service]
+Type=simple
+Environment="LOCAL_ADDR=127.0.0.1"
+Environment="REMOTE_HOST=127.0.0.1"
+EnvironmentFile=%h/.ssh/tunnels/%i
+ExecStart=/usr/bin/ssh -NT ${TARGET} \
+  -o ExitOnForwardFailure=yes -o ServerAliveInterval=60 \
+  -L ${LOCAL_ADDR}:${LOCAL_PORT}:${REMOTE_HOST}:${REMOTE_PORT} ${SSH_OPTS}
+RestartSec=10
+Restart=on-success
+RestartForceExitStatus=255
+
+[Install]
+WantedBy=multi-user.target
