@@ -1,28 +1,14 @@
 set nu!
 
 set nocompatible
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()            " required
 
 filetype plugin indent on
 set guioptions+=m  
@@ -37,7 +23,10 @@ syntax enable
 syntax on
 set nocp
 set backspace=indent,eol,start
-set guifont=Source\ Code\ Pro\ for\ Powerline\ 13
+set guifont=Source\ Code\ Pro\ 13
+
+"colorscheme onehalfdark
+"let g:airline_theme='onehalflight'
 
 set fillchars+=stl:\ ,stlnc:\ 
 let g:airline_powerline_fonts = 1
