@@ -25,11 +25,14 @@ if [[ $monitor =~ ^eDP.*$ ]]; then
     echo "Xft.dpi: 140" | xrdb -merge
     echo "Xcursor.size: 32" | xrdb -override
 else
-    bar_height=20
+    bar_height={{ .ui.bar_height }}
     radius=4.0
-    dpi=96
+    dpi={{ .ui.dpi }}
     tray_size=16
     monitor="{{ .system.default_monitor }}"
+
+    echo "Xft.dpi: {{ .ui.dpi }}" | xrdb -merge
+    echo "Xcursor.size: 32" | xrdb -override
 fi
 
 wal -sR
