@@ -92,6 +92,7 @@ for_window [class="Vlc"] floating enable
 for_window [class="VirtualBox"] floating enable
 for_window [class="qemu"] floating enable
 for_window [class="TeamViewer"] floating enable
+for_window [instance="swiftshader"] floating enable
 
 #===programs shortcuts===
 
