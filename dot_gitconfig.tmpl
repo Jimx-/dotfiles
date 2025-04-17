@@ -6,6 +6,7 @@
 
 [delta]
     navigate = true
+    light = true
 
 [merge]
     conflictstyle = zdiff3
@@ -13,3 +14,11 @@
 [user]
 	email = {{ .github.email }}
 	name = {{ .github.name }}
+    {{ if (index .github "signingkey") }}
+    signingkey = {{ .github.signingkey }}
+    {{ end }}
+
+[commit]
+    {{ if (index .github "signingkey") }}
+    gpgsign = true
+    {{ end }}
