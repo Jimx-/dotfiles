@@ -1,0 +1,21 @@
+export PATH=$HOME/.cargo/bin:$HOME/.local/bin:$PATH
+
+export RISCV=$HOME/tools/riscv
+export LLVM_GPU=$HOME/tools/llvm-gpu
+export RISCV_TOOLCHAIN_PATH=$HOME/tools/riscv32
+
+export GROOM_BUILD_SCRIPT=$HOME/projects/swiftshader/build_kernel.sh
+
+export GOPATH=$HOME/go
+
+export EDITOR=vim
+
+{{ if (index .system "https_proxy") }}
+export HTTPS_PROXY="{{ .system.https_proxy }}"
+export https_proxy="{{ .system.https_proxy }}"
+{{end}}
+
+{{ if (index .system "http_proxy") }}
+export HTTP_PROXY="{{ .system.http_proxy }}"
+export http_proxy="{{ .system.http_proxy }}"
+{{end}}
